@@ -86,7 +86,7 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'images.json';
+//var mUrl = 'images.json';
 
 //PART 2 SLIDESHOW 1 & 2
 function fetchJSON()
@@ -132,6 +132,17 @@ $(document).ready( function() {
   at: "right bottom",
   of: "#nav"
 });
+	
+	$(document).ready( function() {
+  var mUrl = 'images.json';
+
+  const urlParams = new URLSearchParams(window.location.search);
+
+  for (const [key, value] of urlParams) {
+      console.log(`${key}:${value}`);
+      mUrl = value;
+  }
+  fetchJSON();
 
   fetchJSON();
 
