@@ -132,8 +132,7 @@ $(document).ready( function() {
   at: "right bottom",
   of: "#nav"
 });
-	
-	$(document).ready( function() {
+
   var mUrl = 'images.json';
 
   const urlParams = new URLSearchParams(window.location.search);
@@ -144,7 +143,6 @@ $(document).ready( function() {
   }
   fetchJSON();
 
-  fetchJSON();
 
 	// This initially hides the photos' metadata information
 	// $('.details').eq(0).hide();
