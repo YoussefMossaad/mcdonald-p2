@@ -133,14 +133,16 @@ $(document).ready( function() {
   of: "#nav"
 });
 
-  var mUrl = 'images.json';
+  mUrl = 'images.json';
 
   const urlParams = new URLSearchParams(window.location.search);
 
   for (const [key, value] of urlParams) {
       console.log(`${key}:${value}`);
       mUrl = value;
+	  console.log(value);
   }
+
   fetchJSON();
 
 
