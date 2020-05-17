@@ -140,8 +140,11 @@ $(document).ready( function() {
   for (const [key, value] of urlParams) {
       console.log(`${key}:${value}`);
       mUrl = value;
-	  console.log(value);
   }
+	if(mUrl == undefined)
+	{
+		mUrl = images.json;
+	}
 
   fetchJSON();
 
